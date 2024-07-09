@@ -9,7 +9,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/user/forgotpassword', { email });
+      const response = await axios.post('https://techietalk-1.onrender.com/user/forgotpassword', { email });
       if (response.status === 200) {
         toast.success('Password reset email sent!');
       } else {

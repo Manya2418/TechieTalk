@@ -37,8 +37,8 @@ const DisplayAnswer = () => {
   const location=useLocation();
 
     const handleShare=()=>{
-      copy("http://localhost:3000"+location.pathname)
-      alert(`Copied url :`+"http://localhost:3000"+location.pathname)
+      copy("https://techietalk-1.onrender.com"+location.pathname)
+      alert(`Copied url :`+"https://techietalk-1.onrender.com"+location.pathname)
     }
 
     const handleDelete=async ()=>{

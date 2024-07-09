@@ -11,7 +11,7 @@ const Questions = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/question/getallquestion");
+        const res = await axios.get("https://techietalk-1.onrender.com/question/getallquestion");
         setQuestions(res.data);
       } catch (err) {
         console.log("Error fetching questions", err);

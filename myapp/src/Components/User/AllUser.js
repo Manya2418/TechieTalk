@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import LeftSidebar from '../Layout/LeftSidebar';
-import RightSidebar from '../Layout/RightSidebar';
 import { Link } from 'react-router-dom';
 import Loader from '../Loader';
 
@@ -13,7 +12,7 @@ const AllUser = () => {
         const fetchdata=async ()=>{
             setLoading(true)
             try{
-                const res=await axios.get("http://localhost:4000/user/alluser");
+                const res=await axios.get("https://techietalk-1.onrender.com/user/alluser");
                 setusers(res.data)
             }catch(err){
                 console.log(err)

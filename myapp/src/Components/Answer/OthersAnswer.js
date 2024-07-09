@@ -14,7 +14,7 @@ const OthersAnswer = ({question,handleShare,userId}) => {
         const data={userId,ansId}
         setLoading(true);
         try{
-            await axios.delete(`http://localhost:4000/question/${questionId}/deleteAnswer`,{data})
+            await axios.delete(`https://techietalk-1.onrender.com/question/${questionId}/deleteAnswer`,{data})
             toast.success("Answer Deleted!")
             navigate('/')
             

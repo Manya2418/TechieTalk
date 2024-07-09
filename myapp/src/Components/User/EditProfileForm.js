@@ -21,7 +21,7 @@ const EditProfileForm = ({profile}) => {
             }
             setLoading(false)
             try{
-                const response=await axios.post(`http://localhost:4000/user/update/${profile._id}`,userData);
+                const response=await axios.post(`https://techietalk-1.onrender.com/user/update/${profile._id}`,userData);
                 toast.success("Profile Updated!")
                 window.location.reload()
             }catch(err){

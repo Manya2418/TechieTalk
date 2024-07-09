@@ -25,7 +25,7 @@ const UserProfile = () => {
         const fetchdata=async ()=>{
             if(userId){
                 try{
-                    const response=await axios.get(`http://localhost:4000/user/${userId}`);
+                    const response=await axios.get(`https://techietalk-1.onrender.com/user/${userId}`);
                     setProfile(response.data.user)
                 }catch(err){
                     console.log(err)

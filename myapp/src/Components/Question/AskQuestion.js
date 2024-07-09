@@ -49,7 +49,7 @@ const AskQuestion = () => {
         e.preventDefault();
         setLoading(true)
         try {
-            const response = await axios.post('http://localhost:4000/question/askque',formData);
+            const response = await axios.post('https://techietalk-1.onrender.com/question/askque',formData);
             
             toast.success('Submitted Successfully!');
         

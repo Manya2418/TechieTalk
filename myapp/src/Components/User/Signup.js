@@ -66,7 +66,7 @@ const Signup = () => {
             return;
         }
         try {
-            const res = await axios.post('http://localhost:4000/user/signup', formData);
+            const res = await axios.post('https://techietalk-1.onrender.com/user/signup', formData);
             toast.success('Signup successful!');
             setFormData(initialData)
             // console.log(res.data);

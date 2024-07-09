@@ -20,7 +20,7 @@ const ResetPassword = () => {
 
     setLoading(true)
     try {
-      const response = await axios.post(`http://localhost:4000/user/resetpassword/${token}`, { password });
+      const response = await axios.post(`https://techietalk-1.onrender.com/user/resetpassword/${token}`, { password });
 
       if (response.status === 200) {
         toast.success('Password has been reset!');
