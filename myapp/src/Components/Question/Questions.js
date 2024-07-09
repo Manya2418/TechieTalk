@@ -3,7 +3,6 @@ import '../Layout/Component.css'
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import QuestionList from './QuestionList';
-import RightSidebar from '../Layout/RightSidebar';
 
 const Questions = () => {
   const [questions, setQuestions] = useState([]);
