@@ -3,24 +3,31 @@ import '../Layout/Component.css'
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import QuestionList from './QuestionList';
+import Loader from '../Loader';
 
 const Questions = () => {
   const [questions, setQuestions] = useState([]);
+  const [loading,setLoading]=useState();
 
   useEffect(() => {
     const fetchQuestions = async () => {
+      setLoading(true);
       try {
         const res = await axios.get("https://techietalk-1.onrender.com/question/getallquestion");
         setQuestions(res.data);
       } catch (err) {
         console.log("Error fetching questions", err);
+      }finally{
+        setLoading(false)
       }
     };
     fetchQuestions();
   }, []);
   const location=useLocation();
 
-
+  if(loading){
+    return <Loader/>
+  }
   return (
     <>
       <div className='home-content'>
