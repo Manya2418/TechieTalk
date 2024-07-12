@@ -70,7 +70,7 @@ const Login = () => {
         <div className='login-main'>
         
         <div className="login-container">
-            <h1 style={{fontFamily: "Roboto Slab",color:"#4ABDAC",fontSize:"2rem"}}>Techi Talk </h1>
+            <h1 style={{fontFamily: "Roboto Slab",color:"#4ABDAC",fontSize:"2rem"}}>Techie Talk </h1>
             <p>Please login with your details here</p><br/>
                <form className="login-form" onSubmit={handleSubmit}>
                 <div>

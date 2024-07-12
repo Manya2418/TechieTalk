@@ -98,7 +98,7 @@ const Signup = () => {
             </p>
         </div>
         <div className="signup-container">
-        <h1 style={{fontFamily: "Roboto Slab",color:"#4ABDAC",fontSize:"2rem"}}>Welcome to Techi Talk...</h1>
+        <h1 style={{fontFamily: "Roboto Slab",color:"#4ABDAC",fontSize:"2rem"}}>Welcome to Techie Talk...</h1>
             <p>Please Sign up with your details here</p><br/>
             
             <form className="signup-form" onSubmit={handleSubmit}>
