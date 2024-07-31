@@ -12,9 +12,7 @@ const Questions = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       setLoading(true);
-      try {
-        // const res = await axios.get("https://techietalk-1.onrender.com/question/getallquestion");
-        const res=await axios.get("https://techietalk.onrender.com/question/getallquestion")
+      try {  const res=await axios.get("https://techietalk.onrender.com/question/getallquestion")
         setQuestions(res.data);
       } catch (err) {
         console.log("Error fetching questions", err);
