@@ -64,7 +64,7 @@ const Contact = () => {
             </div>
             
             </div>
-            <div class="w-96 bg-customColor p-6 mt-20">
+            <div class="w-64 bg-customColor p-6 mt-20">
                 
                 <h1 class="text-center text-xl text-white">Contact Us</h1>
                 <form className="signup-form">

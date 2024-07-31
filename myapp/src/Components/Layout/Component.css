@@ -102,6 +102,7 @@
     flex-direction: column;
   }
   .home-ask{
+    margin-top: 30%;
     flex-direction: column;
   }
   .Contact .card{
@@ -111,7 +112,6 @@
     width: 100%;
   }
   .home-content{
-    margin-top: 50%;
     width: 100%;
     flex-direction: column;
     margin: auto;
