@@ -21,7 +21,7 @@ const Contact = () => {
         e.preventDefault();
     
         try {
-          await axios.post('https://techietalk-1.onrender.com/user/contact', formData);
+          await axios.post('https://techietalk.onrender.com/user/contact', formData);
           
           setFormData({ name: '', email: '', message: '' });
           alert("done")

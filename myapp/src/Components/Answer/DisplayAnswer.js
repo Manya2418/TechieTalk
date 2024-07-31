@@ -37,8 +37,8 @@ const DisplayAnswer = () => {
   const location=useLocation();
 
     const handleShare=()=>{
-      copy("https://techietalk-1.onrender.com"+location.pathname)
-      alert(`Copied url :`+"https://techietalk-1.onrender.com"+location.pathname)
+      copy("https://techietalk.onrender.com"+location.pathname)
+      alert(`Copied url :`+"https://techietalk.onrender.com"+location.pathname)
     }
 
     const handleDelete=async ()=>{
@@ -48,7 +48,7 @@ const DisplayAnswer = () => {
       }
       setLoading(true)
       try{
-        await axios.delete(`https://techietalk-1.onrender.com/question/delete/${questionId}`,{data:que})
+        await axios.delete(`https://techietalk.onrender.com/question/delete/${questionId}`,{data:que})
         toast.success("Deleted Successful!")
         navigate('/')
       }catch{
@@ -62,7 +62,7 @@ const DisplayAnswer = () => {
       const fetchdata=async()=>{
         setLoading(true)
         try{
-          const response=await axios.get(`https://techietalk-1.onrender.com/question/${questionId}`);
+          const response=await axios.get(`https://techietalk.onrender.com/question/${questionId}`);
           console.log(response.data)
           setquestion(response.data)
    
@@ -93,10 +93,10 @@ const DisplayAnswer = () => {
       }
       setLoading(true)
         try{
-          const data=await axios.post(`https://techietalk-1.onrender.com/question/${questionId}/answer`,formData);
+          const data=await axios.post(`https://techietalk.onrender.com/question/${questionId}/answer`,formData);
           toast.success("Answer is posted!")
           setData({ answerBody: '' });
-          const updatedQuestion=await axios.get(`https://techietalk-1.onrender.com/question/${questionId}`)
+          const updatedQuestion=await axios.get(`https://techietalk.onrender.com/question/${questionId}`)
           setquestion(updatedQuestion.data)
         }catch(err){
           console.log(err)
@@ -115,7 +115,7 @@ const DisplayAnswer = () => {
       setvote(1)
       setLoading(true)
       try {
-          const response = await axios.post(`https://techietalk-1.onrender.com/question/${questionId}/upvote`, {
+          const response = await axios.post(`https://techietalk.onrender.com/question/${questionId}/upvote`, {
               userId: userId,
           });
           
@@ -135,7 +135,7 @@ const DisplayAnswer = () => {
     setvote(-1)
     setLoading(true)
     try {
-        const response = await axios.post(`https://techietalk-1.onrender.com/question/${questionId}/downvote`,{
+        const response = await axios.post(`https://techietalk.onrender.com/question/${questionId}/downvote`,{
           userId: userId,
       });
        
