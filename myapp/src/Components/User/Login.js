@@ -38,7 +38,7 @@ const Login = () => {
         e.preventDefault();
         setLoading(true)
         try {
-            const res = await axios.post('https://techietalk-1.onrender.com/user/login', formData);
+            const res = await axios.post('https://techietalk.onrender.com/user/login', formData);
             const userData={
                 user: res.data.user,
                 token: res.data.token,

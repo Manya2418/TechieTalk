@@ -12,7 +12,7 @@ const AllUser = () => {
         const fetchdata=async ()=>{
             setLoading(true)
             try{
-                const res=await axios.get("https://techietalk-1.onrender.com/user/alluser");
+                const res=await axios.get("https://techietalk.onrender.com/user/alluser");
                 setusers(res.data)
             }catch(err){
                 console.log(err)
@@ -31,7 +31,7 @@ const AllUser = () => {
     <div style={{display:"flex"}}>
         <LeftSidebar/>
         <div className='home-content'>
-        <div class="m-7 flex gap-8 text-center">
+        <div class="m-7 flex gap-8 text-center flex-wrap">
         
         {users.map((user) => (
             <div  class="w-20 flex-col align-middle justify-center">
